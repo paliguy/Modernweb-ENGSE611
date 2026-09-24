@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Check</title>
+</head>
+<body>
+    <div id="output" style="white-space: pre-line;">ผลลัพธ์จะแสดงที่นี่</div>
+    <button onclick="checkGrade()">Run Code</button>
+
+    <script>
+        function checkGrade() {
+            let คะแนน = [Math.floor(Math.random() * 101)]; 
+            let เกรด = "";
+            let สถานะผ่าน = "";
+            if (คะแนน >= 80) {
+                เกรด = "เกรด: A";
+            } else if (คะแนน >= 70) {
+                เกรด = "เกรด: B";
+            } else if (คะแนน >= 60) {
+                เกรด = "เกรด: C";
+            } else if (คะแนน >= 50) {
+                เกรด = "เกรด: D";
+            } else {
+                เกรด = "เกรด: F";
+            }
+            if (คะแนน >= 50) {
+                สถานะผ่าน = "ผลสอบ: ผ่าน";
+            } else {
+                สถานะผ่าน = "ผลสอบ: ไม่ผ่าน";
+            }
+            let outputText = "คะแนนที่ได้: " + คะแนน + "\n" + เกรด + "\n" + สถานะผ่าน;
+            document.getElementById("output").textContent = outputText;
+            console.log("คะแนนที่ได้:", คะแนน);
+            console.log(เกรด);
+            console.log(สถานะผ่าน);
+        }
+    </script>
+</body>
+</html>
