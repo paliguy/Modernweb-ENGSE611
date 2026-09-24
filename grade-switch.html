@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Check1.1</title>
+</head>
+<body>
+    <div id="output" style="white-space: pre-line;">ผลลัพธ์จะแสดงที่นี่</div>
+    <button onclick="checkGrade()">Run Code</button>
+
+    <script>
+        function checkGrade() {
+            let คะแนน = [Math.floor(Math.random() * 101)]; 
+            let เกรด = "";
+            let สถานะผ่าน = "";
+            let คำอธิบาย = "";
+            if (คะแนน >= 80) {
+                เกรด = "เกรด: A";
+            } else if (คะแนน >= 70) {
+                เกรด = "เกรด: B";
+            } else if (คะแนน >= 60) {
+                เกรด = "เกรด: C";
+            } else if (คะแนน >= 50) {
+                เกรด = "เกรด: D";
+            } else {
+                เกรด = "เกรด: F";
+            }
+            if (คะแนน >= 50) {
+                สถานะผ่าน = "ผลสอบ: ผ่าน";
+            } else {
+                สถานะผ่าน = "ผลสอบ: ไม่ผ่าน";
+            }
+            switch (เกรด) {
+                case "เกรด: A": คำอธิบาย = "ยอดเยี่ยม";
+                    break;
+                case "เกรด: B": คำอธิบาย = "ดีมาก";
+                    break;
+                case "เกรด: C": คำอธิบาย = "ดี";
+                    break;
+                case "เกรด: D": คำอธิบาย = "พอใช้";
+                    break;
+                case "เกรด: F": คำอธิบาย = "ไม่ผ่าน";
+                    break;
+                default: คำอธิบาย = "ไม่มีข้อมูล";
+            }
+            let outputText = "คะแนนที่ได้: " + คะแนน + "\n" + เกรด + "\n" + สถานะผ่าน + "\nคำอธิบาย: " + คำอธิบาย;
+            document.getElementById("output").textContent = outputText;
+            console.log("คะแนนที่ได้:", คะแนน);
+            console.log(เกรด);
+            console.log(สถานะผ่าน);
+            console.log("คำอธิบาย:",คำอธิบาย);
+        }
+    </script>
+</body>
+</html>
