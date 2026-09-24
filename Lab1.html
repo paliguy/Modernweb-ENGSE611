@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+    <link rel="stylesheet" href="stylelab1.css">
+</head>
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-box {
+    width: 520px;
+    background: white;
+    border-radius: 8px;
+    padding: 25px 28px 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.header {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header p {
+    margin: 3px 0 0;
+    color: #777;
+    font-size: 16px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    font-size: 30px;
+    color: #666;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+input, select {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    padding: 0 14px;
+    font-size: 17px;
+    margin-bottom: 12px;
+    background: white;
+}
+
+label.title {
+    color: #606770;
+    font-size: 14px;
+    display: block;
+    margin: 4px 0 7px;
+}
+
+.birthday select {
+    flex: 1;
+}
+
+.gender {
+    display: flex;
+    gap: 12px;
+}
+
+.gender label {
+    flex: 1;
+    height: 50px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    font-size: 17px;
+}
+
+.gender input {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.terms {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #606770;
+    margin: 15px 0;
+}
+
+button {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 6px;
+    background: #35c724;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2db41e;
+}
+
+@media (max-width: 600px) {
+    .signup-box {
+        width: 94%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="signup-box">
+
+    <div class="header">
+        <span class="close">&times;</span>
+        <h1>สมัคร</h1>
+        <p>ง่ายและเร็ว</p>
+    </div>
+
+    <form>
+
+        <div class="row">
+            <input type="text" placeholder="ชื่อ" required>
+            <input type="text" placeholder="นามสกุล" required>
+        </div>
+
+        <input
+            type="text"
+            placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล"
+            required
+        >
+
+        <input
+            type="password"
+            placeholder="รหัสผ่านใหม่"
+            required
+        >
+
+        <label class="title">วันเกิด</label>
+
+        <div class="row birthday">
+            <select>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+
+            <select>
+                <option>ม.ค.</option>
+                <option>ก.พ.</option>
+                <option>มี.ค.</option>
+                <option>เม.ย.</option>
+                <option>พ.ค.</option>
+                <option>มิ.ย.</option>
+                <option>ก.ค.</option>
+                <option>ส.ค.</option>
+                <option selected>ก.ย.</option>
+                <option>ต.ค.</option>
+                <option>พ.ย.</option>
+                <option>ธ.ค.</option>
+            </select>
+
+            <select>
+                <option>2026</option>
+                <option>2025</option>
+                <option selected>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+            </select>
+        </div>
+
+        <label class="title">เพศ</label>
+
+        <div class="gender">
+            <label>
+                หญิง
+                <input type="radio" name="gender" value="female">
+            </label>
+
+            <label>
+                ชาย
+                <input type="radio" name="gender" value="male">
+            </label>
+        </div>
+
+        <div class="terms">
+            เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกำหนด
+            นโยบายข้อมูล และนโยบายคุกกี้ของเรา
+            คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา
+            และสามารถเลือกไม่รับได้ในภายหลัง
+        </div>
+
+        <button type="submit">สมัคร</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
